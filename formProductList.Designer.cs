@@ -63,13 +63,13 @@ namespace WindowsFormsApp1
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(932, 41);
+            this.panel1.Size = new System.Drawing.Size(880, 41);
             this.panel1.TabIndex = 8;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.txtSearch);
-            this.panel2.Location = new System.Drawing.Point(609, 3);
+            this.panel2.Location = new System.Drawing.Point(565, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(239, 38);
             this.panel2.TabIndex = 10;
@@ -94,7 +94,7 @@ namespace WindowsFormsApp1
             this.txtSearch.MaxLength = 32767;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PromptText = "Search here";
+            //this.txtSearch.PromptText = "Search here";
             this.txtSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtSearch.SelectedText = "";
             this.txtSearch.SelectionLength = 0;
@@ -124,7 +124,7 @@ namespace WindowsFormsApp1
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(854, 5);
+            this.button3.Location = new System.Drawing.Point(810, 5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(31, 30);
             this.button3.TabIndex = 3;
@@ -139,7 +139,7 @@ namespace WindowsFormsApp1
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(891, 5);
+            this.button4.Location = new System.Drawing.Point(847, 5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(31, 30);
             this.button4.TabIndex = 2;
@@ -189,7 +189,7 @@ namespace WindowsFormsApp1
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(932, 531);
+            this.dataGridView1.Size = new System.Drawing.Size(880, 531);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -219,17 +219,17 @@ namespace WindowsFormsApp1
             // 
             // Column3
             // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column3.HeaderText = "DESCRIPTION";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 110;
             // 
             // Column4
             // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column4.HeaderText = "BRAND";
             this.Column4.Name = "Column4";
+            this.Column4.Width = 73;
             // 
             // CATEGORY
             // 
@@ -276,7 +276,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 572);
+            this.ClientSize = new System.Drawing.Size(880, 572);
             this.ControlBox = false;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);

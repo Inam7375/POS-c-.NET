@@ -19,3 +19,4 @@ E:\POS\C# POS\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.formProduct.resources
 E:\POS\C# POS\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.formProductList.resources
 E:\POS\C# POS\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
 E:\POS\C# POS\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.formStockIn.resources
+E:\POS\C# POS\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.formSearchProductStockIn.resources

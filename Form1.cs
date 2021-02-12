@@ -78,7 +78,6 @@ namespace WindowsFormsApp1
         private void button5_Click(object sender, EventArgs e)
         {
 			formStockIn frm = new formStockIn();
-			frm.LoadProduct();
 			frm.Show();
         }
     }

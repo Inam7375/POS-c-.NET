@@ -32,6 +32,7 @@ namespace WindowsFormsApp1
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnStockIn = new System.Windows.Forms.Button();
             this.labelName = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@ namespace WindowsFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonCategory = new System.Windows.Forms.Panel();
-            this.btnStockIn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -82,6 +82,21 @@ namespace WindowsFormsApp1
             this.panel2.Size = new System.Drawing.Size(300, 575);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // btnStockIn
+            // 
+            this.btnStockIn.FlatAppearance.BorderSize = 0;
+            this.btnStockIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStockIn.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStockIn.ForeColor = System.Drawing.Color.White;
+            this.btnStockIn.Location = new System.Drawing.Point(0, 305);
+            this.btnStockIn.Name = "btnStockIn";
+            this.btnStockIn.Size = new System.Drawing.Size(262, 45);
+            this.btnStockIn.TabIndex = 12;
+            this.btnStockIn.Text = "Stock Entry";
+            this.btnStockIn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStockIn.UseVisualStyleBackColor = true;
+            this.btnStockIn.Click += new System.EventHandler(this.button5_Click);
             // 
             // labelName
             // 
@@ -252,21 +267,6 @@ namespace WindowsFormsApp1
             this.buttonCategory.Name = "buttonCategory";
             this.buttonCategory.Size = new System.Drawing.Size(884, 575);
             this.buttonCategory.TabIndex = 2;
-            // 
-            // btnStockIn
-            // 
-            this.btnStockIn.FlatAppearance.BorderSize = 0;
-            this.btnStockIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStockIn.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStockIn.ForeColor = System.Drawing.Color.White;
-            this.btnStockIn.Location = new System.Drawing.Point(0, 305);
-            this.btnStockIn.Name = "btnStockIn";
-            this.btnStockIn.Size = new System.Drawing.Size(262, 45);
-            this.btnStockIn.TabIndex = 12;
-            this.btnStockIn.Text = "Stock In";
-            this.btnStockIn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStockIn.UseVisualStyleBackColor = true;
-            this.btnStockIn.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form1
             // 
