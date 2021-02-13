@@ -51,7 +51,7 @@ namespace WindowsFormsApp1
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(672, 40);
+            this.panel1.Size = new System.Drawing.Size(669, 40);
             this.panel1.TabIndex = 2;
             // 
             // formBrand
@@ -60,7 +60,7 @@ namespace WindowsFormsApp1
             this.formBrand.FlatAppearance.BorderSize = 0;
             this.formBrand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.formBrand.ForeColor = System.Drawing.Color.White;
-            this.formBrand.Location = new System.Drawing.Point(638, 4);
+            this.formBrand.Location = new System.Drawing.Point(629, 4);
             this.formBrand.Name = "formBrand";
             this.formBrand.Size = new System.Drawing.Size(31, 30);
             this.formBrand.TabIndex = 1;
@@ -163,7 +163,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 210);
+            this.ClientSize = new System.Drawing.Size(669, 210);
             this.ControlBox = false;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblID);
@@ -175,6 +175,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formCategory";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formCategory";
             this.panel1.ResumeLayout(false);

@@ -23,3 +23,5 @@ E:\POS\C# POS\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.formSearchProductStock
 E:\POS\C# POS\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.POS.resources
 E:\POS\C# POS\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.formQty.resources
 E:\POS\C# POS\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.formLookUp.resources
+E:\POS\C# POS\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.formDiscount.resources
+E:\POS\C# POS\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.formSettle.resources

@@ -13,6 +13,8 @@ namespace WindowsFormsApp1
 {
     public partial class POS : Form
     {
+        string id;
+        string price;
         SqlConnection cn = new SqlConnection();
         SqlCommand cm = new SqlCommand();
         dbConnection dbCon = new dbConnection();
@@ -24,11 +26,13 @@ namespace WindowsFormsApp1
             InitializeComponent();
             cn = new SqlConnection(dbCon.MyConnection());
             lblDate.Text = DateTime.Now.ToLongDateString();
+            labelDate.Text = DateTime.Now.ToLongDateString();
+
             this.KeyPreview = true;
 
         }
 
-        private void getTransNo ()
+        public void getTransNo ()
         {
             try
             {
@@ -62,9 +66,11 @@ namespace WindowsFormsApp1
         {
             try
             {
+                Boolean hasrecord = false;
                 dataGridView1.Rows.Clear();
                 int i = 0;
                 double total = 0;
+                double discount = 0;
                 cn.Open();
                 cm = new SqlCommand("select c.id, c.pcode, p.pdesc, c.price, c.qty, c.disc, c.total from tblCart as c inner join tblProduct as p on c.pcode = p.pcode where transno like'"+lblTransaction.Text+"'", cn);
                 dr = cm.ExecuteReader();
@@ -72,13 +78,22 @@ namespace WindowsFormsApp1
                 {
                     i++;
                     total += Double.Parse(dr["total"].ToString());
-                    dataGridView1.Rows.Add(i, dr["id"].ToString(), dr["pdesc"].ToString(), dr["price"].ToString(), dr["qty"].ToString(), dr["disc"].ToString(), Double.Parse(dr["total"].ToString()).ToString("#,##0.00"), "Delete");
-
+                    discount += Double.Parse(dr["disc"].ToString());
+                    dataGridView1.Rows.Add(i, dr["id"].ToString(), dr["pdesc"].ToString(), dr["price"].ToString(), dr["disc"].ToString(), dr["qty"].ToString(), Double.Parse(dr["total"].ToString()).ToString("#,##0.00"), "Delete", dr["pcode"].ToString());
+                    hasrecord = true;
                 }
                 dr.Close();
                 cn.Close();
                 lblSales.Text = total.ToString("#,##0.00");
+                lblDiscount.Text = discount.ToString("#,##0.00");
                 GetCartTotal();
+                if (hasrecord == true) {
+                    btnPayment.Enabled = true;
+                    btnDiscount.Enabled = true;
+                } else {
+                    btnPayment.Enabled = false;
+                    btnDiscount.Enabled = false;
+                }
             } catch (Exception ex)
             {
                 cn.Close();
@@ -88,12 +103,14 @@ namespace WindowsFormsApp1
 
         public void GetCartTotal()
         {
-            double sales = Double.Parse(lblSales.Text);
-            double discount = 0;
+            double discount = Double.Parse(lblDiscount.Text);
+            double sales = Double.Parse(lblSales.Text) - discount;
             double vat = sales * dbCon.GetVal();
             double vatable = sales - vat;
+            //lblSales.Text = sales.ToString("#,##0.00");
             lblVat.Text = vat.ToString("#,##0.00");
             lblVatable.Text = vatable.ToString("#,##0.00");
+            lblTotal.Text = sales.ToString("#,##0.00");
         }
 
         private void labelName_Click(object sender, EventArgs e)
@@ -222,6 +239,34 @@ namespace WindowsFormsApp1
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            int i = dataGridView1.CurrentRow.Index;
+            id = dataGridView1[1, i].Value.ToString();
+            price = dataGridView1[3, i].Value.ToString();
+
+        }
+
+        private void btnDiscount_Click(object sender, EventArgs e)
+        {
+            formDiscount frm = new formDiscount(this);
+            frm.lblID.Text = id;
+            frm.txtPrice.Text = price;
+            frm.ShowDialog();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToString("hh:MM:ss tt");
+        }
+
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+            formSettle frm = new formSettle(this);
+            frm.txtSale.Text = lblTotal.Text;
+            frm.ShowDialog();
         }
     }
 }

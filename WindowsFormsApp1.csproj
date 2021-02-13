@@ -68,6 +68,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="formDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDiscount.Designer.cs">
+      <DependentUpon>formDiscount.cs</DependentUpon>
+    </Compile>
     <Compile Include="formLookUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,12 @@
     <Compile Include="formSearchProductStockIn.Designer.cs">
       <DependentUpon>formSearchProductStockIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="formSettle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formSettle.Designer.cs">
+      <DependentUpon>formSettle.cs</DependentUpon>
+    </Compile>
     <Compile Include="formStockIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDiscount.resx">
+      <DependentUpon>formDiscount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formLookUp.resx">
       <DependentUpon>formLookUp.cs</DependentUpon>
@@ -159,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formSearchProductStockIn.resx">
       <DependentUpon>formSearchProductStockIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formSettle.resx">
+      <DependentUpon>formSettle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formStockIn.resx">
       <DependentUpon>formStockIn.cs</DependentUpon>
