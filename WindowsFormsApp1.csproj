@@ -68,6 +68,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="formLookUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLookUp.Designer.cs">
+      <DependentUpon>formLookUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="formProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,12 @@
     <Compile Include="formProductList.Designer.cs">
       <DependentUpon>formProductList.cs</DependentUpon>
     </Compile>
+    <Compile Include="formQty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formQty.Designer.cs">
+      <DependentUpon>formQty.cs</DependentUpon>
+    </Compile>
     <Compile Include="formSearchProductStockIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +122,12 @@
     <Compile Include="formStockIn.Designer.cs">
       <DependentUpon>formStockIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="POS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS.Designer.cs">
+      <DependentUpon>POS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -117,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLookUp.resx">
+      <DependentUpon>formLookUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formProduct.resx">
       <DependentUpon>formProduct.cs</DependentUpon>
@@ -133,11 +154,17 @@
     <EmbeddedResource Include="formProductList.resx">
       <DependentUpon>formProductList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formQty.resx">
+      <DependentUpon>formQty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formSearchProductStockIn.resx">
       <DependentUpon>formSearchProductStockIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formStockIn.resx">
       <DependentUpon>formStockIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS.resx">
+      <DependentUpon>POS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

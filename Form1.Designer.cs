@@ -46,6 +46,8 @@ namespace WindowsFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonCategory = new System.Windows.Forms.Panel();
+            this.formBrand = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +55,7 @@ namespace WindowsFormsApp1
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.ForestGreen;
+            this.panel1.Controls.Add(this.formBrand);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -235,9 +238,10 @@ namespace WindowsFormsApp1
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(262, 45);
             this.button2.TabIndex = 4;
-            this.button2.Text = " Manage Sales";
+            this.button2.Text = "POS";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -268,6 +272,21 @@ namespace WindowsFormsApp1
             this.buttonCategory.Size = new System.Drawing.Size(884, 575);
             this.buttonCategory.TabIndex = 2;
             // 
+            // formBrand
+            // 
+            this.formBrand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(38)))));
+            this.formBrand.FlatAppearance.BorderSize = 0;
+            this.formBrand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.formBrand.ForeColor = System.Drawing.Color.White;
+            this.formBrand.Location = new System.Drawing.Point(1141, 4);
+            this.formBrand.Name = "formBrand";
+            this.formBrand.Size = new System.Drawing.Size(31, 30);
+            this.formBrand.TabIndex = 2;
+            this.formBrand.Text = "X";
+            this.formBrand.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.formBrand.UseVisualStyleBackColor = false;
+            this.formBrand.Click += new System.EventHandler(this.formBrand_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -279,11 +298,12 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Form1";
+            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -308,6 +328,7 @@ namespace WindowsFormsApp1
 		private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel buttonCategory;
         private System.Windows.Forms.Button btnStockIn;
+        private System.Windows.Forms.Button formBrand;
     }
 }
 

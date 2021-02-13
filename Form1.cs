@@ -80,5 +80,16 @@ namespace WindowsFormsApp1
 			formStockIn frm = new formStockIn();
 			frm.Show();
         }
+
+        private void formBrand_Click(object sender, EventArgs e)
+        {
+			this.Dispose();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+			POS frm = new POS();
+			frm.ShowDialog();
+        }
     }
 }

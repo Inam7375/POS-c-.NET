@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class formProductList
+    partial class formLookUp
     {
         /// <summary>
         /// Required designer variable.
@@ -32,11 +32,11 @@ namespace WindowsFormsApp1
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.formBrand = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.txtSearch = new MetroFramework.Controls.MetroTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,34 +46,69 @@ namespace WindowsFormsApp1
             this.CATEGORY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRICE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Select = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.BackColor = System.Drawing.Color.ForestGreen;
+            this.panel1.Controls.Add(this.formBrand);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(880, 41);
-            this.panel1.TabIndex = 8;
+            this.panel1.Size = new System.Drawing.Size(1150, 40);
+            this.panel1.TabIndex = 4;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // formBrand
+            // 
+            this.formBrand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(38)))));
+            this.formBrand.FlatAppearance.BorderSize = 0;
+            this.formBrand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.formBrand.ForeColor = System.Drawing.Color.White;
+            this.formBrand.Location = new System.Drawing.Point(1107, 3);
+            this.formBrand.Name = "formBrand";
+            this.formBrand.Size = new System.Drawing.Size(31, 30);
+            this.formBrand.TabIndex = 1;
+            this.formBrand.Text = "X";
+            this.formBrand.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.formBrand.UseVisualStyleBackColor = false;
+            this.formBrand.Click += new System.EventHandler(this.formBrand_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 21);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Search Product";
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.txtSearch);
-            this.panel2.Location = new System.Drawing.Point(565, 3);
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 40);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(239, 38);
-            this.panel2.TabIndex = 10;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel2.Size = new System.Drawing.Size(1150, 41);
+            this.panel2.TabIndex = 9;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.txtSearch);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(755, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(395, 41);
+            this.panel3.TabIndex = 10;
             // 
             // txtSearch
             // 
@@ -81,7 +116,7 @@ namespace WindowsFormsApp1
             // 
             // 
             this.txtSearch.CustomButton.Image = null;
-            this.txtSearch.CustomButton.Location = new System.Drawing.Point(213, 1);
+            this.txtSearch.CustomButton.Location = new System.Drawing.Point(359, 1);
             this.txtSearch.CustomButton.Name = "";
             this.txtSearch.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -90,7 +125,7 @@ namespace WindowsFormsApp1
             this.txtSearch.CustomButton.UseSelectable = true;
             this.txtSearch.CustomButton.Visible = false;
             this.txtSearch.Lines = new string[0];
-            this.txtSearch.Location = new System.Drawing.Point(3, 6);
+            this.txtSearch.Location = new System.Drawing.Point(11, 6);
             this.txtSearch.MaxLength = 32767;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
@@ -100,53 +135,13 @@ namespace WindowsFormsApp1
             this.txtSearch.SelectionLength = 0;
             this.txtSearch.SelectionStart = 0;
             this.txtSearch.ShortcutsEnabled = true;
-            this.txtSearch.Size = new System.Drawing.Size(235, 23);
+            this.txtSearch.Size = new System.Drawing.Size(381, 23);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.UseSelectable = true;
             this.txtSearch.WaterMark = "Search here";
             this.txtSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 21);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Product List";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(38)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(810, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(31, 30);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "+";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(38)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(847, 5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(31, 30);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "X";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // dataGridView1
             // 
@@ -172,8 +167,7 @@ namespace WindowsFormsApp1
             this.CATEGORY,
             this.PRICE,
             this.Column5,
-            this.Edit,
-            this.Delete});
+            this.Select});
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -183,14 +177,13 @@ namespace WindowsFormsApp1
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 41);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 81);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(880, 531);
-            this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.Size = new System.Drawing.Size(1150, 469);
+            this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
@@ -255,41 +248,33 @@ namespace WindowsFormsApp1
             this.Column5.ReadOnly = true;
             this.Column5.Width = 54;
             // 
-            // Edit
+            // Select
             // 
-            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Edit.HeaderText = "";
-            this.Edit.Name = "Edit";
-            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Edit.Width = 17;
+            this.Select.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Select.HeaderText = "";
+            this.Select.Name = "Select";
+            this.Select.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Select.Width = 17;
             // 
-            // Delete
-            // 
-            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Delete.HeaderText = "";
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Delete.Width = 17;
-            // 
-            // formProductList
+            // formLookUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 572);
+            this.ClientSize = new System.Drawing.Size(1150, 550);
             this.ControlBox = false;
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "formProductList";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.Name = "formLookUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Text = "formLookUp";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -298,12 +283,12 @@ namespace WindowsFormsApp1
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button formBrand;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
         private MetroFramework.Controls.MetroTextBox txtSearch;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn BarCode;
@@ -312,7 +297,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.DataGridViewTextBoxColumn CATEGORY;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRICE;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Edit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Delete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Select;
     }
 }

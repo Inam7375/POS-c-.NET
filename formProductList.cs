@@ -26,18 +26,24 @@ namespace WindowsFormsApp1
 
         public void LoadRecords()
         {
-            int i = 0;
-            dataGridView1.Rows.Clear();
-            cn.Open();
-            cm = new SqlCommand("select p.pcode, p.barcode ,p.pdesc, p.qty, b.brand, c.category, p.price from tblProduct as p inner join tblBrand as b on b.id = p.bid inner join tblCategory as c on c.id = p.cid where p.pdesc like'" + txtSearch.Text + "%'", cn);
-            dr = cm.ExecuteReader();
-            while (dr.Read())
+            try
             {
-                i++;
-                dataGridView1.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString(), dr[3].ToString(), "Edit", "Remove");
+                int i = 0;
+                dataGridView1.Rows.Clear();
+                cn.Open();
+                cm = new SqlCommand("select p.pcode, p.barcode ,p.pdesc, p.qty, b.brand, c.category, p.price from tblProduct as p inner join tblBrand as b on b.id = p.bid inner join tblCategory as c on c.id = p.cid where p.pdesc like'" + txtSearch.Text + "%'", cn);
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
+                    i++;
+                    dataGridView1.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString(), dr[3].ToString(), "Edit", "Remove");
 
+                }
+                cn.Close();
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "POS System", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            cn.Close();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
