@@ -91,5 +91,14 @@ namespace WindowsFormsApp1
 			POS frm = new POS();
 			frm.ShowDialog();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+			formUserAccount frm = new formUserAccount();
+			frm.TopLevel = false;
+			buttonCategory.Controls.Add(frm);
+			frm.BringToFront();
+			frm.Show();
+        }
     }
 }

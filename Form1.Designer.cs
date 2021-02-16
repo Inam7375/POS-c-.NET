@@ -31,9 +31,10 @@ namespace WindowsFormsApp1
 		{
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.formBrand = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnStockIn = new System.Windows.Forms.Button();
-            this.labelName = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -43,10 +44,9 @@ namespace WindowsFormsApp1
             this.categoryButton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblRole = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonCategory = new System.Windows.Forms.Panel();
-            this.formBrand = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,11 +62,26 @@ namespace WindowsFormsApp1
             this.panel1.Size = new System.Drawing.Size(1184, 40);
             this.panel1.TabIndex = 0;
             // 
+            // formBrand
+            // 
+            this.formBrand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(38)))));
+            this.formBrand.FlatAppearance.BorderSize = 0;
+            this.formBrand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.formBrand.ForeColor = System.Drawing.Color.White;
+            this.formBrand.Location = new System.Drawing.Point(1141, 4);
+            this.formBrand.Name = "formBrand";
+            this.formBrand.Size = new System.Drawing.Size(31, 30);
+            this.formBrand.TabIndex = 2;
+            this.formBrand.Text = "X";
+            this.formBrand.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.formBrand.UseVisualStyleBackColor = false;
+            this.formBrand.Click += new System.EventHandler(this.formBrand_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.panel2.Controls.Add(this.btnStockIn);
-            this.panel2.Controls.Add(this.labelName);
+            this.panel2.Controls.Add(this.lblName);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.button9);
             this.panel2.Controls.Add(this.button7);
@@ -76,7 +91,7 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.categoryButton);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblRole);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -101,17 +116,17 @@ namespace WindowsFormsApp1
             this.btnStockIn.UseVisualStyleBackColor = true;
             this.btnStockIn.Click += new System.EventHandler(this.button5_Click);
             // 
-            // labelName
+            // lblName
             // 
-            this.labelName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.ForeColor = System.Drawing.Color.Green;
-            this.labelName.Location = new System.Drawing.Point(7, 132);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(279, 39);
-            this.labelName.TabIndex = 1;
-            this.labelName.Text = " Username";
-            this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelName.Click += new System.EventHandler(this.label1_Click);
+            this.lblName.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.SpringGreen;
+            this.lblName.Location = new System.Drawing.Point(7, 132);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(279, 39);
+            this.lblName.TabIndex = 1;
+            this.lblName.Text = " Username";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblName.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -154,6 +169,7 @@ namespace WindowsFormsApp1
             this.button7.Text = "User Settings";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -243,16 +259,16 @@ namespace WindowsFormsApp1
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label1
+            // lblRole
             // 
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(13, 161);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(265, 39);
-            this.label1.TabIndex = 2;
-            this.label1.Text = " Administrator";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.lblRole.ForeColor = System.Drawing.Color.White;
+            this.lblRole.Location = new System.Drawing.Point(13, 161);
+            this.lblRole.Name = "lblRole";
+            this.lblRole.Size = new System.Drawing.Size(265, 39);
+            this.lblRole.TabIndex = 2;
+            this.lblRole.Text = " Administrator";
+            this.lblRole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblRole.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // pictureBox1
             // 
@@ -271,21 +287,6 @@ namespace WindowsFormsApp1
             this.buttonCategory.Name = "buttonCategory";
             this.buttonCategory.Size = new System.Drawing.Size(884, 575);
             this.buttonCategory.TabIndex = 2;
-            // 
-            // formBrand
-            // 
-            this.formBrand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(38)))));
-            this.formBrand.FlatAppearance.BorderSize = 0;
-            this.formBrand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.formBrand.ForeColor = System.Drawing.Color.White;
-            this.formBrand.Location = new System.Drawing.Point(1141, 4);
-            this.formBrand.Name = "formBrand";
-            this.formBrand.Size = new System.Drawing.Size(31, 30);
-            this.formBrand.TabIndex = 2;
-            this.formBrand.Text = "X";
-            this.formBrand.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.formBrand.UseVisualStyleBackColor = false;
-            this.formBrand.Click += new System.EventHandler(this.formBrand_Click);
             // 
             // Form1
             // 
@@ -314,9 +315,7 @@ namespace WindowsFormsApp1
 
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Panel panel2;
-		private System.Windows.Forms.Label labelName;
 		private System.Windows.Forms.PictureBox pictureBox1;
-		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Button button9;
 		private System.Windows.Forms.Button button7;
 		private System.Windows.Forms.Button button8;
@@ -329,6 +328,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Panel buttonCategory;
         private System.Windows.Forms.Button btnStockIn;
         private System.Windows.Forms.Button formBrand;
+        public System.Windows.Forms.Label lblName;
+        public System.Windows.Forms.Label lblRole;
     }
 }
 

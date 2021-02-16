@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         SqlConnection cn = new SqlConnection();
         SqlCommand cm = new SqlCommand();
         dbConnection dbCon = new dbConnection();
-        SqlDataReader dr;
+        //SqlDataReader dr;
         POS fpos;
         public formSettle(POS frm)
         {
@@ -133,13 +133,16 @@ namespace WindowsFormsApp1
                         cm.ExecuteNonQuery();
                         cn.Close();
                     }
+                    formRecieptPOS frm = new formRecieptPOS(fpos);
+                    frm.LoadReport(txtCash.Text, txtChange.Text);
+                    frm.ShowDialog();
                     MessageBox.Show("Payment Sucessfuly Saved", "Payment", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     fpos.getTransNo();
                     fpos.LoadCart();
                     this.Dispose();
                 }
                 }
-                 catch(Exception ex)
+                 catch(Exception)
                  {
                      MessageBox.Show("Insufficient amount. Please enter the correct amount!", "Danger!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                  } 
@@ -172,17 +175,25 @@ namespace WindowsFormsApp1
                             cm.ExecuteNonQuery();
                             cn.Close();
                         }
+                        formRecieptPOS frm = new formRecieptPOS(fpos);
+                        frm.LoadReport(txtCash.Text, txtChange.Text);
+                        frm.ShowDialog();
                         MessageBox.Show("Payment Sucessfuly Saved", "Payment", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         fpos.getTransNo();
                         fpos.LoadCart();
                         this.Dispose();
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     MessageBox.Show("Insufficient amount. Please enter the correct amount!", "Danger!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

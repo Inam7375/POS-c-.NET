@@ -83,5 +83,10 @@ namespace WindowsFormsApp1
         {
             LoadRecords();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

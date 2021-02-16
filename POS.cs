@@ -27,7 +27,6 @@ namespace WindowsFormsApp1
             cn = new SqlConnection(dbCon.MyConnection());
             lblDate.Text = DateTime.Now.ToLongDateString();
             labelDate.Text = DateTime.Now.ToLongDateString();
-
             this.KeyPreview = true;
 
         }
@@ -266,6 +265,12 @@ namespace WindowsFormsApp1
         {
             formSettle frm = new formSettle(this);
             frm.txtSale.Text = lblTotal.Text;
+            frm.ShowDialog();
+        }
+
+        private void btnSales_Click(object sender, EventArgs e)
+        {
+            formSoldItems frm = new formSoldItems();
             frm.ShowDialog();
         }
     }

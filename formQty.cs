@@ -47,12 +47,13 @@ namespace WindowsFormsApp1
             if((e.KeyChar==13) && (textBox1.Text != String.Empty))
             {
                 cn.Open();
-                cm = new SqlCommand("insert into tblCart (transno, pcode, price, qty, sdate) values (@transno, @pcode, @price, @qty, @sdate)", cn);
+                cm = new SqlCommand("insert into tblCart (transno, pcode, price, qty, sdate, cashier) values (@transno, @pcode, @price, @qty, @sdate, @cashier)", cn);
                 cm.Parameters.AddWithValue("@transno", transno);
                 cm.Parameters.AddWithValue("@pcode", pcode);
                 cm.Parameters.AddWithValue("@price", price);
                 cm.Parameters.AddWithValue("@qty", int.Parse(textBox1.Text));
                 cm.Parameters.AddWithValue("@sdate", DateTime.Now);
+                cm.Parameters.AddWithValue("@cashier", fpos.lblName.Text);
                 cm.ExecuteNonQuery();
                 cn.Close();
 
