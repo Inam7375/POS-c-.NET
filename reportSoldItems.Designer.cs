@@ -80,6 +80,7 @@ namespace WindowsFormsApp1
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(1172, 529);
             this.reportViewer1.TabIndex = 5;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // reportSoldItems
             // 

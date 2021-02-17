@@ -114,3 +114,5 @@ E:\POS\C# POS\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.formSoldItems.resource
 E:\POS\C# POS\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.reportSoldItems.resources
 E:\POS\C# POS\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.formUserAccount.resources
 E:\POS\C# POS\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.formSecurity.resources
+E:\POS\C# POS\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.formCancelDetails.resources
+E:\POS\C# POS\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.formVoid.resources

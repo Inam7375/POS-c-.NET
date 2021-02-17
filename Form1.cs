@@ -100,5 +100,12 @@ namespace WindowsFormsApp1
 			frm.BringToFront();
 			frm.Show();
         }
-    }
+
+        private void btnSaleHist_Click(object sender, EventArgs e)
+        {
+			POS fpos = new POS();
+			formSoldItems frm = new formSoldItems(fpos);
+			frm.ShowDialog();
+		}
+	}
 }

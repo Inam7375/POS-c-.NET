@@ -44,9 +44,23 @@ namespace WindowsFormsApp1
                 SqlDataAdapter da = new SqlDataAdapter();
 
                 cn.Open();
-                da.SelectCommand = new SqlCommand("select c.id, c.transno, c.pcode, p.pdesc, c.price, c.qty, c.disc, c.total from tblCart as c inner join tblProduct as p on c.pcode = p.pcode where status like 'Sold' and sdate between'" + frpt.dt1.Value.ToString() + "' and '" + frpt.dt2.Value.ToString() + "'", cn);
+                if(frpt.cboCashier.Text == "All Cashierss")
+                {
+                    da.SelectCommand = new SqlCommand("select c.id, c.transno, c.pcode, p.pdesc, c.price, c.qty, c.disc, c.total from tblCart as c inner join tblProduct as p on c.pcode = p.pcode where status like 'Sold' and sdate between'" + frpt.dt1.Value.ToString() + "' and '" + frpt.dt2.Value.ToString() + "'", cn);
+                }
+                else
+                {
+                    da.SelectCommand = new SqlCommand("select c.id, c.transno, c.pcode, p.pdesc, c.price, c.qty, c.disc, c.total from tblCart as c inner join tblProduct as p on c.pcode = p.pcode where status like 'Sold' and sdate between'" + frpt.dt1.Value.ToString() + "' and '" + frpt.dt2.Value.ToString() + "'and cashier like'" + frpt.cboCashier.Text + "'", cn);
+                }
                 da.Fill(ds.Tables["dtSoldItems"]);
                 cn.Close();
+                ReportParameter pDate = new ReportParameter("pDate", "Date From: " + frpt.dt1.Value.ToShortDateString() + " To: " + frpt.dt2.Value.ToShortDateString());
+                ReportParameter pCashier = new ReportParameter("pCashier", "Cashier: " + frpt.cboCashier.Text);
+                ReportParameter pHeader = new ReportParameter("pHeader", "SALES REPORT");
+
+                reportViewer1.LocalReport.SetParameters(pDate);
+                reportViewer1.LocalReport.SetParameters(pCashier);
+                reportViewer1.LocalReport.SetParameters(pHeader);
 
                 rptDS = new ReportDataSource("DataSet1", ds.Tables["dtSoldItems"]);
                 reportViewer1.LocalReport.DataSources.Add(rptDS);
@@ -63,6 +77,11 @@ namespace WindowsFormsApp1
         private void formBrand_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -47,6 +47,8 @@ namespace WindowsFormsApp1
             this.lblRole = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonCategory = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnSaleHist = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -80,12 +82,13 @@ namespace WindowsFormsApp1
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.panel2.Controls.Add(this.btnSaleHist);
             this.panel2.Controls.Add(this.btnStockIn);
             this.panel2.Controls.Add(this.lblName);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button9);
             this.panel2.Controls.Add(this.button7);
             this.panel2.Controls.Add(this.button8);
+            this.panel2.Controls.Add(this.button9);
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.brandButton);
             this.panel2.Controls.Add(this.categoryButton);
@@ -93,6 +96,7 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.lblRole);
             this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(0, 40);
@@ -107,9 +111,9 @@ namespace WindowsFormsApp1
             this.btnStockIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStockIn.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStockIn.ForeColor = System.Drawing.Color.White;
-            this.btnStockIn.Location = new System.Drawing.Point(0, 305);
+            this.btnStockIn.Location = new System.Drawing.Point(0, 467);
             this.btnStockIn.Name = "btnStockIn";
-            this.btnStockIn.Size = new System.Drawing.Size(262, 45);
+            this.btnStockIn.Size = new System.Drawing.Size(300, 32);
             this.btnStockIn.TabIndex = 12;
             this.btnStockIn.Text = "Stock Entry";
             this.btnStockIn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -134,11 +138,11 @@ namespace WindowsFormsApp1
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 203);
+            this.button1.Location = new System.Drawing.Point(0, 437);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(262, 45);
+            this.button1.Size = new System.Drawing.Size(300, 30);
             this.button1.TabIndex = 3;
-            this.button1.Text = " Dashboard";
+            this.button1.Text = "Dashboard";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -162,9 +166,9 @@ namespace WindowsFormsApp1
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(0, 475);
+            this.button7.Location = new System.Drawing.Point(0, 407);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(262, 45);
+            this.button7.Size = new System.Drawing.Size(300, 30);
             this.button7.TabIndex = 10;
             this.button7.Text = "User Settings";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -177,9 +181,9 @@ namespace WindowsFormsApp1
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(0, 440);
+            this.button8.Location = new System.Drawing.Point(0, 377);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(262, 45);
+            this.button8.Size = new System.Drawing.Size(300, 30);
             this.button8.TabIndex = 9;
             this.button8.Text = "System Settings";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -187,13 +191,14 @@ namespace WindowsFormsApp1
             // 
             // button4
             // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 407);
+            this.button4.Location = new System.Drawing.Point(0, 317);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(262, 45);
+            this.button4.Size = new System.Drawing.Size(300, 30);
             this.button4.TabIndex = 8;
             this.button4.Text = "Records";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -201,13 +206,14 @@ namespace WindowsFormsApp1
             // 
             // brandButton
             // 
+            this.brandButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.brandButton.FlatAppearance.BorderSize = 0;
             this.brandButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.brandButton.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brandButton.ForeColor = System.Drawing.Color.White;
-            this.brandButton.Location = new System.Drawing.Point(0, 372);
+            this.brandButton.Location = new System.Drawing.Point(0, 287);
             this.brandButton.Name = "brandButton";
-            this.brandButton.Size = new System.Drawing.Size(262, 45);
+            this.brandButton.Size = new System.Drawing.Size(300, 30);
             this.brandButton.TabIndex = 7;
             this.brandButton.Text = "Manage Brand";
             this.brandButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -216,13 +222,14 @@ namespace WindowsFormsApp1
             // 
             // categoryButton
             // 
+            this.categoryButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.categoryButton.FlatAppearance.BorderSize = 0;
             this.categoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.categoryButton.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoryButton.ForeColor = System.Drawing.Color.White;
-            this.categoryButton.Location = new System.Drawing.Point(0, 338);
+            this.categoryButton.Location = new System.Drawing.Point(0, 257);
             this.categoryButton.Name = "categoryButton";
-            this.categoryButton.Size = new System.Drawing.Size(262, 45);
+            this.categoryButton.Size = new System.Drawing.Size(300, 30);
             this.categoryButton.TabIndex = 6;
             this.categoryButton.Text = "Manage Catagory";
             this.categoryButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,13 +238,14 @@ namespace WindowsFormsApp1
             // 
             // button3
             // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 272);
+            this.button3.Location = new System.Drawing.Point(0, 227);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(262, 45);
+            this.button3.Size = new System.Drawing.Size(300, 30);
             this.button3.TabIndex = 5;
             this.button3.Text = "Manage Products";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -246,13 +254,14 @@ namespace WindowsFormsApp1
             // 
             // button2
             // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 237);
+            this.button2.Location = new System.Drawing.Point(0, 197);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(262, 45);
+            this.button2.Size = new System.Drawing.Size(300, 30);
             this.button2.TabIndex = 4;
             this.button2.Text = "POS";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -287,6 +296,30 @@ namespace WindowsFormsApp1
             this.buttonCategory.Name = "buttonCategory";
             this.buttonCategory.Size = new System.Drawing.Size(884, 575);
             this.buttonCategory.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(300, 197);
+            this.panel3.TabIndex = 13;
+            // 
+            // btnSaleHist
+            // 
+            this.btnSaleHist.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSaleHist.FlatAppearance.BorderSize = 0;
+            this.btnSaleHist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaleHist.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaleHist.ForeColor = System.Drawing.Color.White;
+            this.btnSaleHist.Location = new System.Drawing.Point(0, 347);
+            this.btnSaleHist.Name = "btnSaleHist";
+            this.btnSaleHist.Size = new System.Drawing.Size(300, 30);
+            this.btnSaleHist.TabIndex = 14;
+            this.btnSaleHist.Text = "Sales History";
+            this.btnSaleHist.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSaleHist.UseVisualStyleBackColor = true;
+            this.btnSaleHist.Click += new System.EventHandler(this.btnSaleHist_Click);
             // 
             // Form1
             // 
@@ -330,6 +363,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button formBrand;
         public System.Windows.Forms.Label lblName;
         public System.Windows.Forms.Label lblRole;
+        private System.Windows.Forms.Button btnSaleHist;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 

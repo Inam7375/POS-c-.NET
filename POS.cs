@@ -149,6 +149,10 @@ namespace WindowsFormsApp1
 
         private void btnTransaction_Click(object sender, EventArgs e)
         {
+            if(dataGridView1.Rows.Count > 0)
+            {
+                return;
+            }
             getTransNo();
             txtSearch.Enabled = true;
             txtSearch.Focus();
@@ -202,7 +206,17 @@ namespace WindowsFormsApp1
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            if (dataGridView1.Rows.Count > 0)
+            {
+                MessageBox.Show("Unable to logout. Please cancel transaction", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if(MessageBox.Show("You want to logout?","Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                this.Hide();
+                formSecurity frm = new formSecurity();
+                frm.ShowDialog();
+            }
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -258,7 +272,7 @@ namespace WindowsFormsApp1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lblTime.Text = DateTime.Now.ToString("hh:MM:ss tt");
+            lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
 
         private void btnPayment_Click(object sender, EventArgs e)
@@ -270,7 +284,11 @@ namespace WindowsFormsApp1
 
         private void btnSales_Click(object sender, EventArgs e)
         {
-            formSoldItems frm = new formSoldItems();
+            formSoldItems frm = new formSoldItems(this);
+            frm.dt1.Enabled = false;
+            frm.dt2.Enabled = false;
+            frm.cboCashier.Enabled = false;
+            frm.cboCashier.Text = lblName.Text.Substring(0, lblName.Text.IndexOf(" |"));
             frm.ShowDialog();
         }
     }
